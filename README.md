@@ -11,7 +11,7 @@ A ideia deste projeto surgiu com o intuito de facilitar o dia a dia da produçã
 - **Campos Dinâmicos:** A aplicação exibe campos específicos com base no tipo de atendimento selecionado, garantindo informações precisas e relevantes.
 - **Gerador de Ocorrência:** Após preencher os dados necessários, clique no botão "Gerar Ocorrência" para registrar a atividade.
 - **RBX:** Anteriormente quando apenas copiado a ocorrência e colado no RBX banco de dados, o mesmo nao ficava formatado. Com essa funcionalidade ficou facil Em RBX, vá para Histórico de Atendimentos > Ocorrências > Visualizar > Código Fonte, cole o RBX e clique em Ok para economizar tempo na formatação das ocorrências.
-- - **RBX:** Copia a ocorrência e transforma em html.
+- **RBX:** Copia a ocorrência e transforma em html.
 
 ## Como Utilizar
 1. Selecione o tipo de atendimento no menu suspenso.
