@@ -67,7 +67,7 @@
   <div class="senhaContainer">
       <label for="senhaSIPulse">SENHA SIPULSE:</label>
       <div class="inputWithButton">
-          <input type="text" id="senha SIPulse">
+          <input type="text" id="senha SIPulse" class="buttonGerarSenha">
           <button type="button" onclick="gerarSenhaAleatoria()">Gerar Senha</button>
       </div>
   </div>
@@ -255,8 +255,9 @@
 
     <div class="buttonFlex">
       <button type="button" id="gerarOcorrencia">Gerar Ocorrência</button>
-      <button type="button" id="limpaForm">Limpar</button>
+      <button type="button" id="rbxhtml">RBX</button>
       <button type="button" id="copiaForm">Copiar</button>
+      <button type="button" id="limpaForm">Limpar</button>
     </div>
     
 

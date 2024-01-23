@@ -165,6 +165,9 @@ button:hover {
   align-items: baseline;
   justify-content: space-between;
 }
+#rbxhtml{
+  background-color: #1F34AD;
+}
 #ocorrenciaDiv {
   margin-top: 20px;
   padding: 10px;
@@ -202,6 +205,12 @@ button:hover {
 
 #ocorrenciaDiv p {
   margin: 10px 0; 
+}
+
+button .buttonGerarSenha{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .redes-sociais{
