@@ -54,12 +54,12 @@ export function copiarForm() {
   textarea.value = occurrenceText;
   appendToDOM(document.body, textarea);
 
-  // Seleciona o texto dentro da textarea
+
   textarea.select();
-  textarea.setSelectionRange(0, 99999); // Para dispositivos móveis
+  textarea.setSelectionRange(0, 99999);
 
   try {
-    // Tenta copiar o texto usando a API Clipboard
+
     document.execCommand('copy');
     console.log('Texto copiado para a área de transferência');
   } catch (err) {
@@ -70,16 +70,16 @@ export function copiarForm() {
 }
 
 export function gerarRBXHTML() {
-  // Chama a função gerarOcorrencia para atualizar a ocorrência
+  
   gerarOcorrencia();
 
-  // Obtém o texto da ocorrência atualizada
+  
   var occurrenceText = document.getElementById("ocorrenciaDiv").textContent;
 
-  // Converte o texto da ocorrência para HTML
+  
   var occurrenceInfo = `<p>${occurrenceText.trim().replace(/\n/g, '</p><p>')}</p>\n`;
 
-  // Copia o texto HTML para a área de transferência
+ 
   copyTextToClipboard(occurrenceInfo);
 }
 

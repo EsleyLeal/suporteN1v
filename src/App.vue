@@ -101,6 +101,30 @@
             <input type="text" id="Pon">
         </div>
 
+        <label for="foraNaPonCto">PORTA 1:</label>
+        <input type="text" id="1">
+
+        <label for="foraNaPonCto">PORTA 2:</label>
+        <input type="text" id="2">
+
+        <label for="foraNaPonCto">PORTA 3:</label>
+        <input type="text" id="3">
+
+        <label for="foraNaPonCto">PORTA 4:</label>
+        <input type="text" id="4">
+
+        <label for="foraNaPonCto">PORTA 5:</label>
+        <input type="text" id="5">
+
+        <label for="foraNaPonCto">PORTA 6:</label>
+        <input type="text" id="6">
+
+        <label for="foraNaPonCto">PORTA 7:</label>
+        <input type="text" id="7">
+
+        <label for="foraNaPonCto">PORTA 8:</label>
+        <input type="text" id="8">
+
         <label for="foraNaPonCto">FORA NA PON:</label>
         <input type="text" id="fora Na Pon">
     </div>

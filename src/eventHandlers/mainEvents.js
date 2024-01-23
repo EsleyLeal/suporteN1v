@@ -1,7 +1,7 @@
 // eventHandlers.js
 import { updateCurrentDate, showFields } from '../form.js';
 import { gerarOcorrencia, limparForm, copiarForm } from '../components/modules/buttonForm.js';
-import { gerarRBXHTML } from '../components/modules/buttonForm.js'; // Importe a função gerarRBXHTML
+import { gerarRBXHTML } from '../components/modules/buttonForm.js'; 
 
 export function handleDOMContentLoaded() {
   updateCurrentDate();
@@ -15,7 +15,7 @@ export function handleDOMContentLoaded() {
 document.addEventListener("DOMContentLoaded", function () {
   handleDOMContentLoaded();
 
-  // Adicione o evento de clique para o botão "rbxhtml"
+  
   var rbxButton = document.getElementById("rbxhtml");
   if (rbxButton) {
     rbxButton.addEventListener("click", function () {
