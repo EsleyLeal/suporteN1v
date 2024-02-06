@@ -5,6 +5,7 @@ import { gerarRBXHTML } from '../components/modules/buttonForm.js';
 
 export function handleDOMContentLoaded() {
   updateCurrentDate();
+  showFields();
 
   document.getElementById("serviceType").addEventListener("change", showFields);
   document.getElementById("gerarOcorrencia").addEventListener("click", gerarOcorrencia);
@@ -15,7 +16,6 @@ export function handleDOMContentLoaded() {
 document.addEventListener("DOMContentLoaded", function () {
   handleDOMContentLoaded();
 
-  
   var rbxButton = document.getElementById("rbxhtml");
   if (rbxButton) {
     rbxButton.addEventListener("click", function () {
@@ -23,6 +23,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-
-
