@@ -1,13 +1,16 @@
 
+
 <template>
+  <iframe src="https://forms.office.com/pages/responsepage.aspx?id=ygWfal5nYk2aT_HMz7cu2ZBbvZkClzlDv_JDKnxdx_JUREE0SjlQNzdVRDNOWVk4WTNHSTNWSVRIRCQlQCN0PWcu" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
   <div class="container">
     <div class="redes-sociais">
       <h1>SUPORTE N1</h1>
+      
       <a href="https://www.linkedin.com/in/esleyleal/" class="linkedin-icon" target="_blank"><i
           class="fab fa-linkedin"></i></a>
       <a href="https://github.com/EsleyLeal" class="github-icon" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-
+    
     <form id="activationForm">
       <label for="currentDate"><span id="currentDateValue"></span></label>
       <input type="text" id="currentDate" readonly>
@@ -16,6 +19,7 @@
       <label for="serviceType">Selecione o tipo de atendimento:</label>
 
       <select id="serviceType" onchange="form.showFields">
+        <option value="" disabled selected>Selecione uma opção</option>
         <option value="ATIVAÇÃO DE INTERNET">ATIVAÇÃO DE INTERNET</option>
         <option value="ATIVAÇÃO DE TELEFONIA">ATIVAÇÃO DE TELEFONIA</option>
         <option value="VERIFICAÇÃO DE CTO">VERIFICAÇÃO DE CTO</option>
@@ -501,8 +505,8 @@
         <button type="button" id="limpaForm">Limpar</button>
       </div>
 
-
     </form>
+    
   </div>
 </template>
 
