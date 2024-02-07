@@ -176,6 +176,7 @@ button:hover {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  margin: 5px;
 }
 #rbxhtml{
   background-color: #1F34AD;
@@ -247,3 +248,7 @@ button .buttonGerarSenha{
   font-size: 30px; /* ajuste o tamanho conforme necessário */
 }
 
+.textArea{
+  margin: 10px;
+ 
+}

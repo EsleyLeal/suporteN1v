@@ -504,10 +504,43 @@
         <button type="button" id="copiaForm">Copiar</button>
         <button type="button" id="limpaForm">Limpar</button>
       </div>
-
+      <div>
+        <textarea v-model="rbxConteudo" cols="30" rows="10" style="height: 207px; width: 394px;" class="textArea"></textarea>
+        <button type="button" @click="copiarHTML">Transformar RBX</button>
+      </div>
     </form>
     
   </div>
+  
 </template>
+<script>
+export default {
+  data() {
+    return {
+      rbxConteudo: '', // Dados do textarea
+    };
+  },
+  methods: {
+    copiarHTML() {
+      const htmlTransformado = `<p>${this.rbxConteudo.trim().replace(/\n/g, '</p><p>')}</p>\n`;
+      this.copiarParaAreaDeTransferencia(htmlTransformado);
+
+      // alert('Conteúdo transformado e copiado para a área de transferência!');
+    },
+    copiarParaAreaDeTransferencia(texto) {
+      const elementoTemporario = document.createElement('textarea');
+      document.body.appendChild(elementoTemporario);
+      elementoTemporario.value = texto;
+      elementoTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(elementoTemporario);
+    },
+  },
+};
+</script>
+
+
+
+
 
 <style scoped></style>

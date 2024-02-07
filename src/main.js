@@ -6,4 +6,6 @@ import { handleDOMContentLoaded } from '../src/eventHandlers/mainEvents.js';
 
 document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);
 
+
+
 createApp(App).mount('#app');
