@@ -1,5 +1,6 @@
 import { getElementById, createElement, appendToDOM, removeFromDOM } from './domManipulation.js';
 
+
 window.gerarSenhaAleatoria = function () {
   var caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=";
   var senhaGerada = '';
@@ -12,25 +13,32 @@ window.gerarSenhaAleatoria = function () {
   document.getElementById("senha SIPulse").value = senhaGerada;
 };
 
+
 export function gerarOcorrencia() {
   var currentDate = getElementById("currentDate").value;
   var serviceType = getElementById("serviceType").value;
 
   var specificFields = getElementById(serviceType + "Fields");
-  var specificFieldInputs = specificFields.querySelectorAll("input");
+  var specificFieldInputs = specificFields.querySelectorAll("input, textarea");
 
-  var occurrenceInfo = "Data Atual: " + currentDate + "\n \n" +
+  var occurrenceInfo = "DATA ATUAL: " + currentDate + "\n \n" +
                        serviceType + " REALIZADA COM SUCESSO!" + "\n \n";
 
   specificFieldInputs.forEach(function (input) {
     var label = input.id.toUpperCase() + " - ";
     var labelWithSpaces = label + " ".repeat(Math.max(0, 20 - label.length));
-    occurrenceInfo += labelWithSpaces + input.value + "\n";
+    
+    if (input.tagName.toLowerCase() === 'textarea') {
+      occurrenceInfo += labelWithSpaces + "\n" + input.value.trim().replace(/\n/g, '\n' + ' '.repeat(0)) + "\n";
+    } else {
+      occurrenceInfo += labelWithSpaces + input.value + "\n";
+    }
   });
 
   var ocorrenciaDiv = getElementById("ocorrenciaDiv");
   ocorrenciaDiv.textContent = occurrenceInfo;
 }
+
 
 export function limparForm() {
   var confirmacao = confirm("Tem certeza que deseja limpar os campos?");

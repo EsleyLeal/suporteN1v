@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -28,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: #023064;
 }
 
 h1 {
@@ -36,19 +38,21 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  /* border-radius: 8px; */
+  /* border: 1px solid transparent; */
+  /* padding: 0.6em 1.2em; */
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
+  /* background-color: #1a1a1a; */
+  /* cursor: pointer; */
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -65,39 +69,39 @@ button:focus-visible {
   text-align: center;
 } */
 
-#app 
-{
-    max-width: 1280px;
-    display: flex;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
+#app {
+  max-width: 1280px;
+  display: flex;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #023064;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
 
-body {
+
+/* body {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  background: #023064;
-  
-}
+} */
 
 .container {
   max-width: 500px;
@@ -130,10 +134,10 @@ select {
 
 .slotPonDiv,
 .slotPonDivFusionado {
-    display: flex;
-    padding: 5px;
-    align-items: baseline;
-    flex-direction: row;
+  display: flex;
+  padding: 5px;
+  align-items: baseline;
+  flex-direction: row;
 }
 
 .slotPonDiv input,
@@ -146,18 +150,7 @@ select {
   align-items: baseline;
 }
 
-button {
-  color: white;
-  background-color: #147023;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-button:hover {
-  background-color: #45a049;
-}
 
 .inputWithButton {
   display: flex;
@@ -169,18 +162,16 @@ button:hover {
 }
 
 .inputWithButton button {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
-.buttonFlex{
+.buttonFlex {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin: 5px;
 }
-#rbxhtml{
-  background-color: #1F34AD;
-}
+
 #ocorrenciaDiv {
   margin-top: 20px;
   padding: 10px;
@@ -189,8 +180,8 @@ button:hover {
   background-color: #f8f8f8;
   font-family: Arial, sans-serif;
   max-width: 500px;
-  white-space: pre-line; 
-  line-height: 1.5; 
+  white-space: pre-line;
+  line-height: 1.5;
 }
 
 #ocorrenciaDiv::before {
@@ -200,9 +191,51 @@ button:hover {
   margin: 4px;
 }
 
+#limpaForm {
+  background-color: #147023;
+}
+
+#limpaForm:hover {
+  background-color: rgb(51, 163, 57);
+}
+
+#copiaForm {
+  background-color: #147023;
+}
+
+#copiaForm:hover {
+  background-color: rgb(51, 163, 57);
+}
+
+#gerarPass {
+  font-family: sans-serif;
+  padding: 7px;
+  background-color: #147023;
+}
+
+#gerarPass:hover {
+  background-color: rgb(51, 163, 57);
+}
+
+#rbxhtml {
+  background-color: #1F34AD;
+}
+
+#rbxhtml:hover {
+  background-color: #147023;
+}
+
+#tranformRBX {
+  background-color: #1F34AD;
+}
+
+#tranformRBX:hover {
+  background-color: #147023;
+}
+
 #gerarOcorrencia {
   margin-top: 10px;
-  padding: 8px 15px;
+  /* padding: 8px 15px; */
   background-color: #147023;
   color: white;
   border: none;
@@ -211,44 +244,71 @@ button:hover {
   font-size: 16px;
 }
 
-
 #gerarOcorrencia:hover {
   background-color: rgb(51, 163, 57);
 }
 
 #ocorrenciaDiv p {
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 
-button .buttonGerarSenha{
+button {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+button .buttonGerarSenha {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.redes-sociais{
+.redes-sociais {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .container h1 {
-  text-shadow: 3px 0px 2px rgba(17, 18, 18, 0.32),-2px -9px 22px rgba(246, 253, 254, 0.24);
+  text-shadow: 3px 0px 2px rgba(17, 18, 18, 0.32), -2px -9px 22px rgba(246, 253, 254, 0.24);
   color: #0340b8;
 }
 
-.github-icon{
+.github-icon {
   color: #F6FDFE;
   font-size: 30px;
-  
+
 }
 
 .linkedin-icon {
   color: #F6FDFE;
-  font-size: 30px; /* ajuste o tamanho conforme necessário */
+  font-size: 30px;
 }
 
-.textArea{
+.textArea {
   margin: 10px;
- 
+
+}
+
+.ForaNaPon {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+  white-space: pre-line;
+  resize: none;
+  height: 100px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
 }
