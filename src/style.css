@@ -123,14 +123,16 @@ label {
   margin-top: 10px;
 }
 
-input,
-select {
+input, select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  font-weight: 500;
+  font-size: 20px;
 }
+
 
 .slotPonDiv,
 .slotPonDivFusionado {
@@ -184,11 +186,12 @@ select {
   line-height: 1.5;
 }
 
-#ocorrenciaDiv::before {
+#ocorrenciaDiv:before {
   content: "Informações da Ocorrência:";
   display: block;
-  font-weight: bold;
+  font-weight: 700;
   margin: 4px;
+  font-size: 20px;
 }
 
 #limpaForm {
