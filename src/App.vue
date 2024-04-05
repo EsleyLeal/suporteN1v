@@ -18,7 +18,7 @@
       <input type="text" id="currentDate" readonly>
 
 
-      <label for="serviceType">Selecione o tipo de atendimento:</label>
+      <label id="selecione-atendimento" for="serviceType">Selecione o tipo de atendimento:</label>
 
       <select id="serviceType" onchange="form.showFields">
         <option value="" selected>Selecione uma opção</option>

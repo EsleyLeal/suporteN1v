@@ -77,7 +77,7 @@ button:focus-visible {
   text-align: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
 }
 
 @media (prefers-color-scheme: light) {
@@ -120,7 +120,14 @@ button:focus-visible {
 
 label {
   display: block;
-  margin-top: 10px;
+  margin: 12px;
+  font-size: 18px;
+}
+
+#selecione-atendimento
+{
+  font-size: 23px;
+  font-weight: 700;
 }
 
 input, select {
