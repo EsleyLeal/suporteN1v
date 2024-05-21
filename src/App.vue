@@ -68,6 +68,7 @@
         <select name="TOPOLOGIA" id="TOPOLOGIA">
           <option value="">onu + rot</option>
           <option value="">onu + wifi</option>
+          <option value="">switch</option>
         </select>
         
         
