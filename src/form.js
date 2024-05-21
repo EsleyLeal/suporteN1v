@@ -26,13 +26,11 @@ export function setupFormListeners() {
   var patrimonioInput = getElementById("PATRIMONIO");
 
   clienteInput.addEventListener("input", function () {
-
-    getElementById("PPPOE").value = '';
+    updatePPPOE(); // Chamando a função de atualização do PPPOE ao inserir dados no cliente
   });
 
   patrimonioInput.addEventListener("input", function () {
-
-    updatePPPOE();
+    updatePPPOE(); // Chamando a função de atualização do PPPOE ao inserir dados no patrimônio
   });
 }
 
@@ -44,59 +42,70 @@ export function updatePPPOE() {
   var clienteValue = clienteInput.value.trim();
   var patrimonioValue = patrimonioInput.value.trim();
 
-
-  clienteValue = removePrefix(clienteValue);
+  // Remover acentos e caracteres especiais do nome do cliente
+  clienteValue = removeSpecialChars(clienteValue);
 
   if (clienteValue !== '' && patrimonioValue !== '') {
+    // Ajustar regex para remover números antes do nome
+    var nomeCompleto = clienteValue.replace(/^\d+\s*/, '');
 
-    var nomeCompleto = clienteValue.split(/\s+/);
+    // Verificar se há "DE", "DO", "DA", etc., e pegar o próximo nome após eles
+    var nomeSplit = nomeCompleto.split(/\s+/);
+    var primeiroNome = '';
+    var segundoNome = '';
 
-    var primeiroNome = nomeCompleto[0]; 
-    var segundoNome = nomeCompleto[1];
+    for (var i = 0; i < nomeSplit.length; i++) {
+      if (!['DE', 'DO', 'DA', 'DOS', 'DAS'].includes(nomeSplit[i].toUpperCase())) {
+        if (primeiroNome === '') {
+          primeiroNome = nomeSplit[i];
+        } else {
+          segundoNome = nomeSplit[i];
+          break;
+        }
+      }
+    }
 
     var pppoeValue = `${primeiroNome.toLowerCase()}.${segundoNome.toLowerCase()}\t${primeiroNome.toLowerCase()}${patrimonioValue}`;
 
     pppoeInput.value = pppoeValue;
+  } else {
+    // Se o cliente ou o patrimônio estiverem vazios, limpar o valor do PPPOE
+    pppoeInput.value = '';
   }
 }
 
-function removePrefix(cliente) {
 
-  var index = cliente.lastIndexOf('-');
-
-  if (index !== -1) {
-    return cliente.slice(index + 1);
-  }
-
-  return cliente;
+  
+// Função para remover acentos e caracteres especiais
+function removeSpecialChars(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9\s]/g, '');
 }
-
 
 export function setupSignalColor() {
   var sinalOnuInput = getElementById("SINAL_ONU");
 
   // Função para aplicar a lógica de cores
   function applyColorLogic() {
-      var sinalText = sinalOnuInput.value.trim();
+    var sinalText = sinalOnuInput.value.trim();
 
-      // Ajuste da expressão regular para tratar espaços entre o sinal de menos e o número
-      var match = sinalText.match(/([-+]?\d*\.\d+|\d+|-\s*\d*\.\d+|-\d+)/);
+    // Ajuste da expressão regular para tratar espaços entre o sinal de menos e o número
+    var match = sinalText.match(/([-+]?\d*\.\d+|\d+|-\s*\d*\.\d+|-\d+)/);
 
-      if (match) {
-          var sinalValue = parseFloat(match[0]);
+    if (match) {
+      var sinalValue = parseFloat(match[0]);
 
-          // Atualização da condição para considerar -27 como vermelho
-          if (sinalValue <= -27.0) {
-              addClass(sinalOnuInput, 'red');
-              removeClass(sinalOnuInput, 'green');
-          } else {
-              addClass(sinalOnuInput, 'green');
-              removeClass(sinalOnuInput, 'red');
-          }
+      // Atualização da condição para considerar -27 como vermelho
+      if (sinalValue <= -27 || sinalValue >= 27) {
+        addClass(sinalOnuInput, 'red');
+        removeClass(sinalOnuInput, 'green');
       } else {
-          removeClass(sinalOnuInput, 'green');
-          removeClass(sinalOnuInput, 'red');
+        addClass(sinalOnuInput, 'green');
+        removeClass(sinalOnuInput, 'red');
       }
+    } else {
+      removeClass(sinalOnuInput, 'green');
+      removeClass(sinalOnuInput, 'red');
+    }
   }
 
   // Adiciona o evento input para lidar com alterações em tempo real

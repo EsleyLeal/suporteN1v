@@ -30,7 +30,7 @@
         <option value="MUDANÇA DE ENDEREÇO">MUDANÇA DE ENDEREÇO</option>
         <option value="VERIFICAÇÃO DE CTO">VERIFICAÇÃO DE CTO  ( CONECTOR )  1X8 </option>
         <option value="VERIFICAÇÃO DE CTO 1X16">VERIFICAÇÃO DE CTO  ( CONECTOR )   1X16 </option>
-        <option value="VERIFICAÇÃO DE CTO ( FUSIONADO )">VERIFICAÇÃO DE CTO ( FUSIONADO ) 1X8</option>
+        <option value="VERIFICAÇÃO DE CTO ( FUSIONADO )">VERIFICAÇÃO DE CTO ( FUSIONADO ) 1X8 AMERICANO</option>
         <option value="VERIFICACAO DE CTO FUSIONADO 1x8 GRUPO">VERIFICAÇÃO DE CTO ( FUSIONADO ) 1X8 GRUPO</option>
         <option value="VERIFICAÇÃO DE CTO ( FUSIONADO ) 1x16">VERIFICAÇÃO DE CTO ( FUSIONADO ) 1X16</option>
         <option value="VERIFICAÇÃO DE CTO (FUSIONADO) 1X16 MARCA ALEATÓRIA">VERIFICAÇÃO DE CTO ( FUSIONADO ) 1x16  ALEATÓRIA</option>
@@ -54,16 +54,23 @@
 
         <label for="FHTT">FHTT:</label>
         <input type="text" id="FHTT">
-
+        
+        <label for="CTOAtivacao">CTO:</label>
+        <input type="text" id="CTO">
+        
         <label for="PATRIMONIO">PATRIMONIO:</label>
         <input type="text" id="PATRIMONIO">
 
+        <!-- <label for="TOPOLOGIA">TOPOLOGIA:</label>
+        <input type="text" id="TOPOLOGIA" value=""> -->
+
         <label for="TOPOLOGIA">TOPOLOGIA:</label>
-        <input type="text" id="TOPOLOGIA">
-
-        <label for="CTOAtivacao">CTO:</label>
-        <input type="text" id="CTO">
-
+        <select name="TOPOLOGIA" id="TOPOLOGIA">
+          <option value="">onu + rot</option>
+          <option value="">onu + wifi</option>
+        </select>
+        
+        
         <label for="OLTAtivacao">OLT:</label>
         <input type="text" id="OLT">
 
@@ -89,7 +96,7 @@
         </div>
 
         <label for="sipServer">SIPSERVER:</label>
-        <input type="text" id="sipServer">
+        <input type="text" id="sipServer" value="sip:numero@172.31.2.18">
       </div>
 
 
@@ -203,6 +210,9 @@
         <input type="text" id="ponto de Referencia">
 
         <div class="slotPonDiv">
+          <label for="frameCtoFusionado">FRAME:</label>
+          <input type="text" id="frame">
+
           <label for="slotNumeroCto">SLOT:</label>
           <input type="text" id="slot">
 
@@ -240,6 +250,8 @@
 
       <!-- Seção para VERIFICAÇÃO DE CTO 1x16-->
       <div id="VERIFICAÇÃO DE CTO 1X16Fields" class="customFields hidden">
+        
+
         <label for="tecnicoCto">TECNICO:</label>
         <input type="text" id="tecnico">
 
@@ -256,6 +268,9 @@
         <input type="text" id="ponto de Referencia">
 
         <div class="slotPonDiv">
+          <label for="frameCtoFusionado">FRAME:</label>
+          <input type="text" id="frame">
+
           <label for="slotNumeroCto">SLOT:</label>
           <input type="text" id="slot">
 
