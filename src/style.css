@@ -2,11 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: #ffffffde;
+  background-color: #023064;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -122,16 +120,19 @@ label {
   display: block;
   margin: 12px;
   font-size: 18px;
+  color: black;
+  font-weight: 500;
 }
 
-#selecione-atendimento
-{
+#selecione-atendimento {
   font-size: 23px;
   font-weight: 700;
   color: black;
 }
 
-input, select {
+input,
+select {
+  border: none;
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -139,6 +140,8 @@ input, select {
   box-sizing: border-box;
   font-weight: 500;
   font-size: 20px;
+  background-color: white;
+  color: black;
 }
 
 
@@ -192,6 +195,7 @@ input, select {
   max-width: 500px;
   white-space: pre-line;
   line-height: 1.5;
+  color: black;
 }
 
 #ocorrenciaDiv:before {
@@ -200,6 +204,7 @@ input, select {
   font-weight: 700;
   margin: 4px;
   font-size: 20px;
+  color: black;
 }
 
 #limpaForm {
@@ -302,8 +307,10 @@ button .buttonGerarSenha {
 }
 
 .textArea {
+  color: black;
+  background-color: white;
   margin: 10px;
-
+  font-size: x-large;
 }
 
 .ForaNaPon {
