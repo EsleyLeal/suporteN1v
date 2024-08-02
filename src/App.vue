@@ -99,6 +99,12 @@
 
         <label for="sipServer">SIPSERVER:</label>
         <input type="text" id="sipServer" value="sip:numero@172.31.2.18">
+
+        <label for="ip">IP:</label>
+        <input type="text" id="ip">
+
+        <label for="index">INDEX:</label>
+        <input type="text" id="index">
       </div>
 
 
