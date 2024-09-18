@@ -1,5 +1,8 @@
 # suporteN1
 
+#Obs: Com apenas 1 semana de empresa eu encontrei a possibilidade de melhorar nossos atendimentos, então decidir criar esse projeto que atualmente vem ajudando toda a equipe do setor.
+
+
 ## Visão Geral
 Este projeto tem como objetivo oferecer uma solução eficiente para o registro de ocorrências e atendimentos de suporte N1. Desenvolvido utilizando tecnologias web, este sistema fornece formulários dinâmicos para diferentes tipos de atendimentos, facilitando o processo de documentação e acompanhamento.
 
