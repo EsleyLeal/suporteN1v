@@ -1,6 +1,6 @@
 # suporteN1
 
-# Obs: Com apenas 1 semana de empresa eu encontrei a possibilidade de melhorar nossos atendimentos, então decidir criar esse projeto que atualmente vem ajudando toda a equipe do setor.
+Obs: Com apenas 1 semana de empresa eu encontrei a possibilidade de melhorar nossos atendimentos, então decidir criar esse projeto que atualmente vem ajudando toda a equipe do setor.
 
 
 ## Visão Geral
