@@ -1,5 +1,6 @@
 import { getElementById, addClass, removeClass } from './components/modules/domManipulation.js';
 
+
 export function updateCurrentDate() {
   var currentDateElement = getElementById("currentDate");
   var currentDate = new Date();

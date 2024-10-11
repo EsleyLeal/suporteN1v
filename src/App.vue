@@ -1,6 +1,7 @@
 
 
 <template>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
   <iframe class="iframeC"
     src="https://forms.office.com/pages/responsepage.aspx?id=ygWfal5nYk2aT_HMz7cu2ZBbvZkClzlDv_JDKnxdx_JUREE0SjlQNzdVRDNOWVk4WTNHSTNWSVRIRCQlQCN0PWcu"
     width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
@@ -66,15 +67,43 @@
 
         <label for="TOPOLOGIA">TOPOLOGIA:</label>
         <select name="TOPOLOGIA" id="TOPOLOGIA">
-          <option value="">onu + rot</option>
-          <option value="">onu + wifi</option>
-          <option value="">ont</option>
-          <option value="">switch</option>
+          <option value="">ONU + ROT</option>
+          <option value="">ONU + WIFI</option>
+          <option value="">ONT</option>
+          <option value="">SWITCH</option>
         </select>
         
+        <!-- <input type="text" id="OLT"> -->
         
-        <label for="OLTAtivacao">OLT:</label>
-        <input type="text" id="OLT">
+  <div>
+    <label for="OLTAtivacao">OLT:</label>
+    <select name="OLTAtivacao" id="OLT" v-model="selectedOLT" ref="OLT">
+      <option value="DISTRITO - EPON - FIBERHOME">DISTRITO - EPON - FIBERHOME</option>
+      <option value="JPA - TAMBIA - FIBERHOME">JPA - TAMBIA - FIBERHOME</option>
+      <option value="CABEDELO - EPON - FIBERHOME">CABEDELO - EPON - FIBERHOME</option>
+      <option value="BESSA NORTE - FIBERHOME">BESSA NORTE - FIBERHOME</option>
+      <option value="BESSA SUL - FIBERHOME">BESSA SUL - FIBERHOME</option>
+      <option value="TAMBAU CABO BRANCO - FIBERHOME">TAMBAU CABO BRANCO - FIBERHOME</option>
+      <option value="TAMBAU MANAIRA - FIBERHOME">TAMBAU MANAIRA - FIBERHOME</option>
+      <option value="SEDE - NOVO - FIBERHOME">SEDE - NOVO - FIBERHOME</option>
+      <option value="MME A02 - FIBERHOME">MME A02 - FIBERHOME</option>
+      <option value="MME PL - FIBERHOME">MME PL - FIBERHOME</option>
+      <option value="CAPIM - FIBERHOME">CAPIM - FIBERHOME</option>
+      <option value="RIO TINTO - FIBERHOME">RIO TINTO - FIBERHOME</option>
+      <option value="CAMPINA GRADE - FIBERHOME">CAMPINA GRADE - FIBERHOME</option>
+      <option value="PATOS - FIBERHOME">PATOS - FIBERHOME</option>
+      <option value="SEDE PATOS - FIBERHOME">SEDE PATOS - FIBERHOME</option>
+      <option value="BANCÁRIOS - HUAWEI">BANCÁRIOS - HUAWEI</option>
+      <option value="MANGABEIRA - HUAWEI">MANGABEIRA - HUAWEI</option>
+      <option value="BOSQUE - HUAWEI">BOSQUE - HUAWEI</option>
+      <option value="DT - HUAWEI">DT - HUAWEI</option>
+      <option value="CBD-HUAWEI">CBD-HUAWEI</option>
+      <option value="ALAMOANA - HUAWEI">ALAMOANA - HUAWEI</option>
+    </select>
+  </div>
+
+
+
 
         <label for="PPPOEAtivacao">PPPOE:</label>
         <input type="text" id="PPPOE">
@@ -627,38 +656,44 @@
 
   </div>
 </template>
-<script>
 
+<script>
+import $ from "jquery";
+import "select2/dist/css/select2.min.css";
+import "select2/dist/js/select2.min.js";
 
 export default {
   data() {
     return {
-      rbxConteudo: '', // Dados do textarea
+      selectedOLT: "",
     };
   },
-  methods: {
-    copiarHTML() {
-      const htmlTransformado = `<p>${this.rbxConteudo.trim().replace(/\n/g, '</p><p>')}</p>\n`;
-      this.copiarParaAreaDeTransferencia(htmlTransformado);
-
-      // alert('Conteúdo transformado e copiado para a área de transferência!');
-    },
-    copiarParaAreaDeTransferencia(texto) {
-      const elementoTemporario = document.createElement('textarea');
-      document.body.appendChild(elementoTemporario);
-      elementoTemporario.value = texto;
-      elementoTemporario.select();
-      document.execCommand('copy');
-      document.body.removeChild(elementoTemporario);
+  mounted() {
+  if ($ && $.fn.select2) {
+    console.log('jQuery e select2 carregados');
+    $(this.$refs.OLT).select2({
+      placeholder: "Selecione um endereço",
+      allowClear: true,
+      tags: true,
+    });
+  } else {
+    console.error('jQuery ou select2 não carregados corretamente');
+  }
+},
+  watch: {
+    selectedOLT(newValue) {
+      // Sincroniza o valor selecionado com o Vue.js
+      $(this.$refs.OLT).val(newValue).trigger("change");
     },
   },
 };
-
-
-
-
 </script>
 
+<style scoped>
+body {
+  font-family: Arial, sans-serif;
+}
+</style>
 
 
 
