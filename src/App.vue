@@ -73,38 +73,9 @@
           <option value="">SWITCH</option>
         </select>
         
-        <!-- <input type="text" id="OLT"> -->
+        <label for="TOPOLOGIA">OLT:</label>
+        <input type="text" id="OLT">
         
-  <div>
-    <label for="OLTAtivacao">OLT:</label>
-    <select name="OLTAtivacao" id="OLT" v-model="selectedOLT" ref="OLT">
-      <option value="DISTRITO - EPON - FIBERHOME">DISTRITO - EPON - FIBERHOME</option>
-      <option value="JPA - TAMBIA - FIBERHOME">JPA - TAMBIA - FIBERHOME</option>
-      <option value="CABEDELO - EPON - FIBERHOME">CABEDELO - EPON - FIBERHOME</option>
-      <option value="BESSA NORTE - FIBERHOME">BESSA NORTE - FIBERHOME</option>
-      <option value="BESSA SUL - FIBERHOME">BESSA SUL - FIBERHOME</option>
-      <option value="TAMBAU CABO BRANCO - FIBERHOME">TAMBAU CABO BRANCO - FIBERHOME</option>
-      <option value="TAMBAU MANAIRA - FIBERHOME">TAMBAU MANAIRA - FIBERHOME</option>
-      <option value="SEDE - NOVO - FIBERHOME">SEDE - NOVO - FIBERHOME</option>
-      <option value="MME A02 - FIBERHOME">MME A02 - FIBERHOME</option>
-      <option value="MME PL - FIBERHOME">MME PL - FIBERHOME</option>
-      <option value="CAPIM - FIBERHOME">CAPIM - FIBERHOME</option>
-      <option value="RIO TINTO - FIBERHOME">RIO TINTO - FIBERHOME</option>
-      <option value="CAMPINA GRADE - FIBERHOME">CAMPINA GRADE - FIBERHOME</option>
-      <option value="PATOS - FIBERHOME">PATOS - FIBERHOME</option>
-      <option value="SEDE PATOS - FIBERHOME">SEDE PATOS - FIBERHOME</option>
-      <option value="BANCÁRIOS - HUAWEI">BANCÁRIOS - HUAWEI</option>
-      <option value="MANGABEIRA - HUAWEI">MANGABEIRA - HUAWEI</option>
-      <option value="BOSQUE - HUAWEI">BOSQUE - HUAWEI</option>
-      <option value="DT - HUAWEI">DT - HUAWEI</option>
-      <option value="CBD-HUAWEI">CBD-HUAWEI</option>
-      <option value="ALAMOANA - HUAWEI">ALAMOANA - HUAWEI</option>
-    </select>
-  </div>
-
-
-
-
         <label for="PPPOEAtivacao">PPPOE:</label>
         <input type="text" id="PPPOE">
 
@@ -169,32 +140,8 @@
           <option value="">SWITCH</option>
         </select>
 
-        <div>
-    <label for="localidadeMudancaEquipamento">OLT:</label>
-    <select name="localidadeMudancaEquipamento" id="OLT" v-model="selectedOLT" ref="OLT">
-      <option value="DISTRITO - EPON - FIBERHOME">DISTRITO - EPON - FIBERHOME</option>
-      <option value="JPA - TAMBIA - FIBERHOME">JPA - TAMBIA - FIBERHOME</option>
-      <option value="CABEDELO - EPON - FIBERHOME">CABEDELO - EPON - FIBERHOME</option>
-      <option value="BESSA NORTE - FIBERHOME">BESSA NORTE - FIBERHOME</option>
-      <option value="BESSA SUL - FIBERHOME">BESSA SUL - FIBERHOME</option>
-      <option value="TAMBAU CABO BRANCO - FIBERHOME">TAMBAU CABO BRANCO - FIBERHOME</option>
-      <option value="TAMBAU MANAIRA - FIBERHOME">TAMBAU MANAIRA - FIBERHOME</option>
-      <option value="SEDE - NOVO - FIBERHOME">SEDE - NOVO - FIBERHOME</option>
-      <option value="MME A02 - FIBERHOME">MME A02 - FIBERHOME</option>
-      <option value="MME PL - FIBERHOME">MME PL - FIBERHOME</option>
-      <option value="CAPIM - FIBERHOME">CAPIM - FIBERHOME</option>
-      <option value="RIO TINTO - FIBERHOME">RIO TINTO - FIBERHOME</option>
-      <option value="CAMPINA GRADE - FIBERHOME">CAMPINA GRADE - FIBERHOME</option>
-      <option value="PATOS - FIBERHOME">PATOS - FIBERHOME</option>
-      <option value="SEDE PATOS - FIBERHOME">SEDE PATOS - FIBERHOME</option>
-      <option value="BANCÁRIOS - HUAWEI">BANCÁRIOS - HUAWEI</option>
-      <option value="MANGABEIRA - HUAWEI">MANGABEIRA - HUAWEI</option>
-      <option value="BOSQUE - HUAWEI">BOSQUE - HUAWEI</option>
-      <option value="DT - HUAWEI">DT - HUAWEI</option>
-      <option value="CBD-HUAWEI">CBD-HUAWEI</option>
-      <option value="ALAMOANA - HUAWEI">ALAMOANA - HUAWEI</option>
-    </select>
-  </div>
+        <label for="TOPOLOGIA">OLT:</label>
+        <input type="text" id="OLT">
 
         <label for="ppoeMudancaEquipamento">PPOE:</label>
         <input type="text" id="PPOE">
@@ -217,32 +164,6 @@
         <label for="oltMigracao">OLT:</label>
         <input type="text" id="OLT">
 
-        <div>
-    <label for="oltMigracao">OLT:</label>
-    <select name="oltMigracao" id="oltMigracao" v-model="selectedOLT" ref="oltMigracao">
-      <option value="DISTRITO - EPON - FIBERHOME">DISTRITO - EPON - FIBERHOME</option>
-      <option value="JPA - TAMBIA - FIBERHOME">JPA - TAMBIA - FIBERHOME</option>
-      <option value="CABEDELO - EPON - FIBERHOME">CABEDELO - EPON - FIBERHOME</option>
-      <option value="BESSA NORTE - FIBERHOME">BESSA NORTE - FIBERHOME</option>
-      <option value="BESSA SUL - FIBERHOME">BESSA SUL - FIBERHOME</option>
-      <option value="TAMBAU CABO BRANCO - FIBERHOME">TAMBAU CABO BRANCO - FIBERHOME</option>
-      <option value="TAMBAU MANAIRA - FIBERHOME">TAMBAU MANAIRA - FIBERHOME</option>
-      <option value="SEDE - NOVO - FIBERHOME">SEDE - NOVO - FIBERHOME</option>
-      <option value="MME A02 - FIBERHOME">MME A02 - FIBERHOME</option>
-      <option value="MME PL - FIBERHOME">MME PL - FIBERHOME</option>
-      <option value="CAPIM - FIBERHOME">CAPIM - FIBERHOME</option>
-      <option value="RIO TINTO - FIBERHOME">RIO TINTO - FIBERHOME</option>
-      <option value="CAMPINA GRADE - FIBERHOME">CAMPINA GRADE - FIBERHOME</option>
-      <option value="PATOS - FIBERHOME">PATOS - FIBERHOME</option>
-      <option value="SEDE PATOS - FIBERHOME">SEDE PATOS - FIBERHOME</option>
-      <option value="BANCÁRIOS - HUAWEI">BANCÁRIOS - HUAWEI</option>
-      <option value="MANGABEIRA - HUAWEI">MANGABEIRA - HUAWEI</option>
-      <option value="BOSQUE - HUAWEI">BOSQUE - HUAWEI</option>
-      <option value="DT - HUAWEI">DT - HUAWEI</option>
-      <option value="CBD-HUAWEI">CBD-HUAWEI</option>
-      <option value="ALAMOANA - HUAWEI">ALAMOANA - HUAWEI</option>
-    </select>
-  </div>
       
       </div>
 
@@ -281,32 +202,8 @@
         <label for="fhttMudancaEndereco">FHTT:</label>
         <input type="text" id="FHTT">
         
-  <div>
-    <label for="oltMudancaEndereco">OLT:</label>
-    <select name="oltMudancaEndereco" id="OLT" v-model="selectedOLT" ref="OLT">
-      <option value="DISTRITO - EPON - FIBERHOME">DISTRITO - EPON - FIBERHOME</option>
-      <option value="JPA - TAMBIA - FIBERHOME">JPA - TAMBIA - FIBERHOME</option>
-      <option value="CABEDELO - EPON - FIBERHOME">CABEDELO - EPON - FIBERHOME</option>
-      <option value="BESSA NORTE - FIBERHOME">BESSA NORTE - FIBERHOME</option>
-      <option value="BESSA SUL - FIBERHOME">BESSA SUL - FIBERHOME</option>
-      <option value="TAMBAU CABO BRANCO - FIBERHOME">TAMBAU CABO BRANCO - FIBERHOME</option>
-      <option value="TAMBAU MANAIRA - FIBERHOME">TAMBAU MANAIRA - FIBERHOME</option>
-      <option value="SEDE - NOVO - FIBERHOME">SEDE - NOVO - FIBERHOME</option>
-      <option value="MME A02 - FIBERHOME">MME A02 - FIBERHOME</option>
-      <option value="MME PL - FIBERHOME">MME PL - FIBERHOME</option>
-      <option value="CAPIM - FIBERHOME">CAPIM - FIBERHOME</option>
-      <option value="RIO TINTO - FIBERHOME">RIO TINTO - FIBERHOME</option>
-      <option value="CAMPINA GRADE - FIBERHOME">CAMPINA GRADE - FIBERHOME</option>
-      <option value="PATOS - FIBERHOME">PATOS - FIBERHOME</option>
-      <option value="SEDE PATOS - FIBERHOME">SEDE PATOS - FIBERHOME</option>
-      <option value="BANCÁRIOS - HUAWEI">BANCÁRIOS - HUAWEI</option>
-      <option value="MANGABEIRA - HUAWEI">MANGABEIRA - HUAWEI</option>
-      <option value="BOSQUE - HUAWEI">BOSQUE - HUAWEI</option>
-      <option value="DT - HUAWEI">DT - HUAWEI</option>
-      <option value="CBD-HUAWEI">CBD-HUAWEI</option>
-      <option value="ALAMOANA - HUAWEI">ALAMOANA - HUAWEI</option>
-    </select>
-  </div>
+        <label for="TOPOLOGIA">OLT:</label>
+        <input type="text" id="OLT">
 
         <label for="novaCtoMudancaEndereco">NOVA CTO:</label>
         <input type="text" id="NOVA CTO">
