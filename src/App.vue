@@ -639,38 +639,30 @@
 
 <script>
 
-
-import $ from "jquery";
-import "select2/dist/css/select2.min.css";
-import "select2/dist/js/select2.min.js";
-
 export default {
   data() {
     return {
-      selectedOLT: "",
-      placeholder: "Selecione um endereço",
-      allowClear: true
+      rbxConteudo: '', // Dados do textarea
     };
   },
-  mounted() {
-  if ($ && $.fn.select2) {
-    console.log('jQuery e select2 carregados');
-    $(this.$refs.OLT).select2({
-      placeholder: "Selecione um endereço",
-      allowClear: true,
-      tags: true,
-    });
-  } else {
-    console.error('jQuery ou select2 não carregados corretamente');
-  }
-},
-  watch: {
-    selectedOLT(newValue) {
-      // Sincroniza o valor selecionado com o Vue.js
-      $(this.$refs.OLT).val(newValue).trigger("change");
+  methods: {
+    copiarHTML() {
+      const htmlTransformado = `<p>${this.rbxConteudo.trim().replace(/\n/g, '</p><p>')}</p>\n`;
+      this.copiarParaAreaDeTransferencia(htmlTransformado);
+
+      // alert('Conteúdo transformado e copiado para a área de transferência!');
+    },
+    copiarParaAreaDeTransferencia(texto) {
+      const elementoTemporario = document.createElement('textarea');
+      document.body.appendChild(elementoTemporario);
+      elementoTemporario.value = texto;
+      elementoTemporario.select();
+      document.execCommand('copy');
+      document.body.removeChild(elementoTemporario);
     },
   },
 };
+
 </script>
 
 <style scoped>
