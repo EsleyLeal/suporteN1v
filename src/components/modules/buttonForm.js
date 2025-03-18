@@ -54,7 +54,7 @@ export function limparForm() {
   var confirmacao = confirm("Tem certeza que deseja limpar os campos?");
 
   if (confirmacao) {
-      var allFields = document.querySelectorAll('.customFields input, .customFields textarea, .customFields select');
+      var allFields = document.querySelectorAll('.customFields input, .customFields textarea, .customFields select, .input-producao-1');
       
       allFields.forEach(function (input) {
           if (input.id !== "sipServer") {
