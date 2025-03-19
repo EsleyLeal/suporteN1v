@@ -700,10 +700,32 @@ export default {
       outputNomeWifi5G: '',
       topologiaSelecionada: '', // Variável para armazenar a seleção da topologia
       mensagensSuporteJogos: [
-        // Suas mensagens de suporte de jogos aqui
+        "Não prestamos suporte para problemas relacionados a servidores de jogos online, pois a conectividade e o desempenho desses servidores estão fora do alcance da nossa infraestrutura de rede. Esses problemas são geralmente causados por fatores como a configuração do servidor de jogos. Todas as configurações dentro do padrão e nenhum problema identificado.",
+        
+        "Infelizmente, não prestamos suporte para problemas relacionados a servidores de jogos online, uma vez que a conectividade e o desempenho desses servidores são independentes da nossa infraestrutura de rede. Esses problemas geralmente decorrem de configurações internas do servidor de jogos. Após verificação, todas as nossas configurações estão dentro do padrão e não identificamos nenhum problema na rede.",
+        
+        "Gostaríamos de esclarecer que não fornecemos suporte para questões relacionadas a servidores de jogos online, pois a performance e a conectividade desses servidores não estão vinculadas à nossa infraestrutura de rede. Normalmente, esses problemas estão associados a configurações específicas do servidor de jogos. Após análise, confirmamos que todas as nossas configurações estão dentro dos parâmetros padrões e não detectamos nenhuma falha em nossa rede.",
+        
+        "Não podemos prestar suporte para problemas relacionados a servidores de jogos online, pois a conectividade e o desempenho desses servidores estão além do nosso controle e fora da nossa infraestrutura de rede. Os problemas que afetam o jogo geralmente se originam da configuração do próprio servidor. Nossa rede está funcionando normalmente, com todas as configurações corretamente ajustadas e sem problemas detectados.",
+        
+        "É importante destacar que não prestamos suporte para problemas em servidores de jogos online, uma vez que esses problemas estão geralmente relacionados à configuração do servidor de jogo e não à nossa infraestrutura. Após verificação, podemos confirmar que nossa rede está estável, com todas as configurações dentro dos padrões recomendados e sem nenhum problema identificado.",
+        
+        "Informamos que não oferecemos suporte para questões relacionadas a servidores de jogos online, visto que a performance e a conectividade desses servidores são independentes da nossa infraestrutura de rede. Tais problemas normalmente resultam de configurações do servidor de jogos. Após análise cuidadosa, garantimos que todas as configurações em nossa rede estão conforme o padrão estabelecido, e não há falhas ou anomalias em nossa infraestrutura.",
+        
+        "Não prestamos suporte para servidores de jogos online, pois os problemas de conectividade e desempenho desses servidores não estão relacionados à nossa rede. Esses problemas geralmente vêm de configurações do próprio servidor de jogo. Após verificação, todas as nossas configurações estão dentro do padrão e não identificamos nenhum problema em nossa rede."
       ],
       mensagensSuporteWifi: [
-        // Suas mensagens de suporte Wi-Fi aqui
+        "Após verificar que o equipamento está configurado dentro dos parâmetros padrão, informamos que a performance do Wi-Fi não é garantida devido a limitações naturais da tecnologia. Fatores como interferência de outros dispositivos eletrônicos (micro-ondas, telefones, redes Wi-Fi vizinhas), obstáculos físicos (paredes, espelhos, distância do roteador), e a qualidade da placa de rede ou drivers no dispositivo podem impactar diretamente a velocidade e estabilidade da conexão. A distância do roteador, por exemplo, pode reduzir significativamente a intensidade do sinal, e placas de rede antigas ou com drivers desatualizados podem limitar o desempenho, independentemente da qualidade da infraestrutura da rede. Nenhum problema identificado, banda sendo entregue normalmente.",
+
+        "Embora o equipamento esteja devidamente configurado, é importante destacar que a performance do Wi-Fi pode ser limitada por fatores como a interferência de aparelhos eletrônicos, a presença de obstáculos físicos como paredes e espelhos, e a distância do roteador. Além disso, placas de rede antigas ou drivers desatualizados podem afetar a qualidade da conexão, independente da qualidade da infraestrutura de rede.",
+
+        "Após a análise, o equipamento está em conformidade com as configurações padrão. No entanto, fatores como a interferência de outros dispositivos, obstáculos como paredes e distância do roteador, além da qualidade da placa de rede e drivers, podem impactar significativamente o desempenho da conexão Wi-Fi. Distâncias longas do roteador e configurações de hardware desatualizadas podem diminuir a velocidade da conexão.",
+
+        "O equipamento foi verificado e está funcionando dentro dos parâmetros padrão, mas a performance do Wi-Fi pode ser afetada por fatores ambientais como interferência de outros aparelhos, barreiras físicas e a distância do roteador. A placa de rede e os drivers do dispositivo também podem influenciar o desempenho, especialmente se estiverem desatualizados ou não forem compatíveis com as velocidades desejadas.",
+
+        "Após a verificação das configurações do equipamento, confirmamos que ele está dentro do padrão. Contudo, a qualidade da conexão Wi-Fi pode ser prejudicada por interferências de dispositivos como micro-ondas e telefones, obstáculos como paredes e a distância do roteador. A eficiência da placa de rede e a atualização dos drivers também são fatores críticos para garantir uma boa performance da conexão.",
+
+        "O equipamento está configurado corretamente de acordo com os parâmetros padrão, mas a performance do Wi-Fi pode ser influenciada por interferência de outros dispositivos, distâncias do roteador e obstáculos físicos. A qualidade da placa de rede e os drivers do dispositivo também têm grande impacto na velocidade e estabilidade da conexão, sendo importante garantir que estejam atualizados para otimizar o desempenho."
       ],
       mensagemAtual: null,
       ultimoIndiceJogos: -1, // Para garantir que a mesma mensagem de jogos não seja repetida consecutivamente
